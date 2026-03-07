@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# Anas Aktaa – Senior Full-Stack Developer Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A professional, responsive portfolio site built with React. It is static and can be hosted on **GitHub Pages** with no backend.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Header / Navbar**: Logo (name), nav links, light/dark mode toggle, mobile menu
+- **Home / About Me**: Bio, education, quick links (Resume, LinkedIn, GitHub)
+- **Skills**: Categories with icons (languages, frameworks, cloud, CI/CD, databases, architecture)
+- **Projects**: Quiz Companion, Variant, River4Beauty, Professional Lawyer, CompVoIP with tech stack and descriptions
+- **System Design**: Placeholders for architecture diagrams (Quiz Companion, Variant, River4Beauty)
+- **AI Assistant**: Client-side Q&A about projects, skills, system design, resume
+- **Resume**: PDF embed + download, links to LinkedIn, GitHub, portfolio
+- **Contact**: Form with EmailJS (configurable via env), validation, success/error messages
+- **Footer**: Quick links, social links, AI assistant shortcut, copyright
 
-### `npm start`
+## Setup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Clone and install**
+   ```bash
+   git clone https://github.com/Anas001989/anas-aktaa-portfolio.git
+   cd anas-aktaa-portfolio
+   npm install
+   ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **Resume PDF**  
+   Put your resume file in the `public` folder as `resume.pdf`. The site will embed it and offer a download button.
 
-### `npm test`
+3. **Contact form (EmailJS)**  
+   - Create a service and template at [EmailJS](https://www.emailjs.com/).  
+   - Copy `.env.example` to `.env` and set:
+   ```env
+   REACT_APP_EMAILJS_SERVICE_ID=your_service_id
+   REACT_APP_EMAILJS_TEMPLATE_ID=your_template_id
+   REACT_APP_EMAILJS_PUBLIC_KEY=your_public_key
+   ```
+   Template variables supported: `from_name`, `from_email`, `subject`, `message`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. **Run locally**
+   ```bash
+   npm start
+   ```
+   Opens at [http://localhost:3000](http://localhost:3000).
 
-### `npm run build`
+## Deploy to GitHub Pages
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. In `package.json`, ensure `homepage` matches your repo:
+   ```json
+   "homepage": "https://anas001989.github.io/anas-aktaa-portfolio"
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Build and deploy:
+   ```bash
+   npm run build
+   npm run deploy
+   ```
+   This pushes the `build` output to the `gh-pages` branch. GitHub Pages will serve the site from that branch.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. In the repo: **Settings → Pages** → Source: **Deploy from a branch** → Branch: **gh-pages** → Save.
 
-### `npm run eject`
+The site will be available at `https://<username>.github.io/anas-aktaa-portfolio`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- React 19
+- Plain CSS (variables, no backend)
+- EmailJS for contact form
+- react-icons for skill icons
+- Client-side only; suitable for GitHub Pages
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Content
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Copy and links live in `src/data/content.js`.  
+- AI assistant answers are in `src/utils/aiKnowledge.js`.  
+- Add project screenshots/videos by updating `src/sections/Projects.js` and placing assets in `public` or using external URLs.
 
-## Learn More
+## License
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Private use. © Anas Aktaa.
