@@ -63,9 +63,9 @@ export const PROJECTS = [
     tagline: 'AI-driven quiz platform',
     tech: ['Next.js', 'React.js', 'PostgreSQL', 'Google Vertex AI', 'OpenAI', 'Supabase'],
     description: 'AI-powered quiz system supporting dynamic content and image generation, modular animation system, gamified feedback, and scalable attempt tracking.',
-    showcase: 'video', // or 'embed', 'screenshots'
     demoUrl: null,
     videoUrl: null,
+    embedUrl: null,
   },
   {
     id: 'variant',
@@ -73,10 +73,9 @@ export const PROJECTS = [
     tagline: 'Design Automation Engine',
     tech: ['Node.js', 'React.js', 'MongoDB', 'C#', 'AWS', 'Azure'],
     description: 'Multi-tenant CAD automation platform with dynamic model generation and Forge Viewer integration.',
-    showcase: 'embed',
-    demoUrl: 'https://demo.variantconfigurator.com/',
-    embedUrl: 'https://trial.variantconfigurator.com/?product=UtilityTrailer&productAuth=0&referrerUrl=https%3A%2F%2Fwww.solidcad.ca%2Fproducts%2Fsolidcad-products%2Fvariant-product-configurator%2F/', // Add your Variant web app URL here (e.g. https://your-app.com)
-    embedNote: '3D model / design automation preview',
+    demoUrl: null,
+    videoUrl: 'https://www.youtube.com/watch?v=BiGdrH9wzXY',
+    embedUrl: 'https://trial.variantconfigurator.com/?product=UtilityTrailer&productAuth=0&referrerUrl=https%3A%2F%2Fwww.solidcad.ca%2Fproducts%2Fsolidcad-products%2Fvariant-product-configurator%2F/',
   },
   {
     id: 'river4beauty',
@@ -84,11 +83,11 @@ export const PROJECTS = [
     tagline: 'E-commerce and mobile apps',
     tech: ['PHP', 'Node.js', 'React.js', 'Thunkable', 'Firebase'],
     description: 'Full-stack e-commerce platform with hybrid mobile apps (iOS/Android), real-time provider sync, promotion engine, and admin dashboard.',
-    showcase: 'video',
-    videoUrl: 'https://www.youtube.com/watch?v=oW5lVxFAHTE',
     demoUrl: null,
-    androidUrl: 'https://play.google.com/store/apps/details?id=com.river4beauty.ca&hl=en_US', // Google Play store link
-    iosUrl: 'https://apps.apple.com/us/app/river4beauty/id6612023303',    // Apple App Store link
+    videoUrl: 'https://www.youtube.com/watch?v=oW5lVxFAHTE',
+    embedUrl: null,
+    androidUrl: 'https://play.google.com/store/apps/details?id=com.river4beauty.ca&hl=en_US',
+    iosUrl: 'https://apps.apple.com/us/app/river4beauty/id6612023303',
   },
   {
     id: 'professional-lawyer',
@@ -96,8 +95,9 @@ export const PROJECTS = [
     tagline: 'Enterprise Archiving System',
     tech: ['C#', 'Windows Forms', 'SQL Server'],
     description: 'Desktop application for lawyers with advanced document archiving, search, account and case management.',
-    showcase: 'screenshots',
     demoUrl: null,
+    videoUrl: null,
+    embedUrl: null,
   },
   {
     id: 'compvoip',
@@ -105,8 +105,9 @@ export const PROJECTS = [
     tagline: 'Android VOIP App',
     tech: ['Java', 'UDP', 'VOIP over Wi-Fi'],
     description: 'Mobile app for secure voice calls over Wi-Fi between connected devices without internet or service providers.',
-    showcase: 'video',
     demoUrl: null,
+    videoUrl: null,
+    embedUrl: null,
   },
 ];
 

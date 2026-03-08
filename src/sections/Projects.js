@@ -53,9 +53,10 @@ export default function Projects() {
                 )}
               </div>
             </div>
+            {(project.videoUrl || project.embedUrl) && (
             <div className="project-showcase">
-              {project.showcase === 'video' && (
-                project.videoUrl ? (
+              {project.videoUrl && (
+                <div className="showcase-item">
                   <iframe
                     src={getVideoEmbedUrl(project.videoUrl)}
                     title={`${project.name} - Video`}
@@ -63,31 +64,19 @@ export default function Projects() {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
                   />
-                ) : (
-                  <div className="showcase-placeholder">
-                    <span>Video demo</span>
-                  </div>
-                )
+                </div>
               )}
-              {project.showcase === 'embed' && (
-                project.embedUrl ? (
+              {project.embedUrl && (
+                <div className="showcase-item">
                   <iframe
                     src={project.embedUrl}
-                    title={`${project.name} - 3D / Design Automation`}
+                    title={`${project.name} - Embed`}
                     className="showcase-iframe"
                   />
-                ) : (
-                  <div className="showcase-placeholder">
-                    <span>{project.embedNote || '3D / Embed'}</span>
-                  </div>
-                )
-              )}
-              {(project.showcase === 'screenshots' || !project.showcase) && (
-                <div className="showcase-placeholder">
-                  <span>Screenshots</span>
                 </div>
               )}
             </div>
+          )}
           </article>
         ))}
       </div>
