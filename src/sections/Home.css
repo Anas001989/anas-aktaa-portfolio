@@ -41,12 +41,19 @@
 .home-photo-placeholder {
   aspect-ratio: 1;
   max-width: 280px;
-  border-radius: var(--radius);
+  border-radius: 50%;
+  overflow: hidden;
   background: var(--bg-card);
   border: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.home-photo-placeholder .home-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .photo-text {
   color: var(--text-muted);

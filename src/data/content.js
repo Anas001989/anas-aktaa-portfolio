@@ -3,6 +3,7 @@ export const LINKS = {
   linkedin: 'https://linkedin.com/in/anas-aktaa-7abb88150',
   github: 'https://github.com/Anas001989',
   resumePdf: '/resume.pdf', // Place resume.pdf in public folder
+  profilePhoto: '/profile.png', // e.g. '/profile.jpg' (put image in public folder) or full URL
 };
 
 export const BIO = `Senior Software Engineer with 10+ years experience designing and developing high-performance, distributed, and cloud-native systems using Node.js, .NET Core, AWS, and other modern technologies. Experienced leading cross-functional teams and delivering complex software systems aligned with business goals.`;

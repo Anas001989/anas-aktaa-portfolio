@@ -30,7 +30,15 @@ export default function Home() {
         </div>
         <div className="home-side">
           <div className="home-photo-placeholder">
-            <span className="photo-text">Photo</span>
+            {LINKS.profilePhoto ? (
+              <img
+                src={LINKS.profilePhoto.startsWith('http') ? LINKS.profilePhoto : `${process.env.PUBLIC_URL || ''}${LINKS.profilePhoto}`}
+                alt="Anas Aktaa"
+                className="home-photo-img"
+              />
+            ) : (
+              <span className="photo-text">Photo</span>
+            )}
           </div>
           <div className="home-education card">
             <h3>Education</h3>
